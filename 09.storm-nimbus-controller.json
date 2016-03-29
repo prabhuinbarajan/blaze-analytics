@@ -1,0 +1,41 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "nimbus",
+    "labels": {
+      "name": "nimbus"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "name": "nimbus"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+      		"name": "nimbus"
+        }
+      },
+      "spec": {
+    	"containers": [{
+        	"name": "nimbus",
+        	"image": "mattf/storm-nimbus",
+        	"ports": [{
+            	"containerPort": 6627
+          	}],
+        	 "env": [ {
+        	   "name": "ZOOKEEPER_SERVICE_HOST",
+          	   "value": "zooc.default"
+          	}],
+        	"resources": {
+          		"limits": {
+            		"cpu": "100m"
+          		}
+        	}
+      	}]
+  	  }
+    }
+  }
+}

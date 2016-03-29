@@ -1,0 +1,21 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "nimbus-ui",
+    "labels": {
+      "name": "nimbus-ui"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "port": 8080
+      }
+    ],
+    "selector": {
+      "name": "nimbus-ui"
+    },
+    "type": "LoadBalancer"
+  }
+}

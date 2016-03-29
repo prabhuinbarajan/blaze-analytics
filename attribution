@@ -1,0 +1,23 @@
+Zookeeper
+https://github.com/mattf/docker-zookeeper
+https://github.com/eliaslevy/docker-zookeeper
+
+Kafka Manager:
+base : https://github.com/yahoo/kafka-manager
+dockerization : https://hub.docker.com/r/sheepkiller/kafka-manager/
+kitization (k8s ization): https://github.com/prabhuinbarajan/kafka-manager-docker
+
+
+Storm
+https://github.com/kubernetes/kubernetes/tree/release-1.2/examples/storm
+https://github.com/mattf/docker-storm/
+http://www.michael-noll.com/tutorials/running-multi-node-storm-cluster/
+
+Sample Topology
+https://github.com/ashrithr/storm-helloworld
+
+DNS:
+https://github.com/kubernetes/kubernetes/tree/release-1.2/cluster/addons/dns
+
+
+
