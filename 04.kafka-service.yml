@@ -11,6 +11,10 @@ spec:
     name: kafka-port
     targetPort: 9092
     protocol: TCP
+  - port: 9999
+    name: kafka-jmx-port
+    targetPort: 9999
+    protocol: TCP
   selector:
     app: kafka
   type: LoadBalancer

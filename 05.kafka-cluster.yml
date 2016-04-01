@@ -16,6 +16,9 @@ spec:
         image: prabhuinbarajan/kafka-docker
         ports:
         - containerPort: 9092
+          name: kafka
+        - containerPort: 9999
+          name: jmx
         env:
         - name: KAFKA_JMX_PORT
           value: "9999"      
