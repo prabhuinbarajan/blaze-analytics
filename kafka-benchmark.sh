@@ -3,7 +3,8 @@ bin/kafka-topics.sh --zookeeper zookeeper.internal.hippocamp.io:2181 --create --
 
 Single thread, no replication
 
-bin/kafka-run-class.sh org.apache.kafka.clients.tools.ProducerPerformance test7 50000000 100 -1 acks=1 bootstrap.servers=kafka.internal.hippocamp.io:9092 buffer.memory=67108864 batch.size=8196
+time bin/kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic test7 --num-records 50000000 --record-size 100 --throughput -1 --producer-props acks=1 bootstrap.servers=kafka.internal.hippocamp.io:9092 buffer.memory=67108864 batch.size=8196
+
 
 Single-thread, async 3x replication
 
